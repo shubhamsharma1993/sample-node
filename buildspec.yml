@@ -6,7 +6,9 @@ env:
     MAJOR_VERSION: “1”
     MINOR_VERSION: “0”
     GIT_REPO: “https://github.com/shubhamsharma1993/sample-node.git"
-  git-credential-helper: yes
+  parameter-store:
+   GIT_USER: “shubhamsharma1993”
+   GIT_PASS: “Admin_1234#”
 
 phases:
   install:
