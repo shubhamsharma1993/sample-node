@@ -20,7 +20,7 @@ phases:
      - echo “password $GIT_PASS” >> ~/.netrc
      - echo $BRANCE_NAME
      - echo $GIT_REPO
-     - git clone -b $BRANCH_NAME $GIT_REPO
+     - git clone -b master https://github.com/shubhamsharma1993/sample-node.git
   build:
    commands:
      - cd sample-node
