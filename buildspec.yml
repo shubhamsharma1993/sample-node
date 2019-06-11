@@ -9,6 +9,16 @@ env:
   git-credential-helper: yes
 
 phases:
+  install:
+    commands:
+      - apt-get update -y && apt-get install -y git
+
+  pre_build:
+    commands:
+     - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
+     - echo “login $GIT_USER” >> ~/.netrc
+     - echo “password $GIT_PASS” >> ~/.netrc
+     - git clone -b $BRANCH_NAME $GIT_REPO
   build:
    commands:
      - cd sample-node
