@@ -6,9 +6,7 @@ env:
     MAJOR_VERSION: “1”
     MINOR_VERSION: “0”
     GIT_REPO: “https://github.com/shubhamsharma1993/sample-node.git"
-  parameter-store:
-   GIT_USER: “shubhamsharma1993”
-   GIT_PASS: “Admin_1234#”
+  git-credential-helper: yes
 
 phases:
   install:
@@ -20,6 +18,8 @@ phases:
      - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
      - echo “login $GIT_USER” >> ~/.netrc
      - echo “password $GIT_PASS” >> ~/.netrc
+     - echo $BRANCE_NAME
+     - echo $GIT_REPO
      - git clone -b $BRANCH_NAME $GIT_REPO
   build:
    commands:
