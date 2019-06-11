@@ -1,29 +1,18 @@
 version: 0.2
 
-env: "development"
+env:
+  variables:
+    BRANCH_NAME: “master”
+    MAJOR_VERSION: “1”
+    MINOR_VERSION: “0”
+    GIT_REPO: “https://github.com/shubhamsharma1993/sample-node.git"
+  parameter-store:
+   GIT_USER: “shubhamsharma1993”
+   GIT_PASS: “Admin_1234#”
 
-variables:
-
-BRANCH_NAME: “master”
-
-MAJOR_VERSION: “1”
-
-MINOR_VERSION: “0”
-
-GIT_REPO: “https://github.com/shubhamsharma1993/sample-node.git"
-
-parameter-store:
-
-GIT_USER: “shubhamsharma1993”
-
-GIT_PASS: “Admin_1234#”
-
-build:
-
-commands:
-
-- cd sample-node
-
-- git config --global user.email "shubham.sharma2@sourcefuse.com"
-
-- bash git_taging.sh
+phases:
+  build:
+   commands:
+     - cd sample-node
+     - git config --global user.email "shubham.sharma2@sourcefuse.com"
+     - bash git_taging.sh
