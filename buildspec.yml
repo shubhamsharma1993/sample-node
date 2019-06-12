@@ -2,8 +2,8 @@ version: 0.1
 
 env:
  parameter-store:
-   GIT_USER: “AS-GIT-USER-NAME”
-   GIT_PASS: “AS-GIT-PASSWORD”
+   GIT_USER: “AS-GIT-USERNAME”
+   GIT_PASS: “AS-GIT-PASS”
 
 phases:
   install:
