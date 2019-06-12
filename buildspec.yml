@@ -1,7 +1,9 @@
 version: 0.1
 
 env:
-  git-credential-helper: yes
+ parameter-store:
+   GIT_USER: “AS-GIT-USER-NAME”
+   GIT_PASS: “AS-GIT-PASSWORD”
 
 phases:
   install:
