@@ -27,4 +27,4 @@ phases:
 
 artifacts :
    files :
-    - output.zip
+    - sample.zip
