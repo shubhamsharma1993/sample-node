@@ -1,9 +1,10 @@
 version: 0.2
 
 env:
- variables:
-   GIT_USER: "shubhamsharma1993"
-   GIT_PASS: “Admin_1234#”
+ parameter-store:
+    GIT_USER: "GIT_USERNAME"
+    GIT_PASS: "GIT_PASSWORD"
+ git-credential-helper: yes
 
 phases:
   install:
