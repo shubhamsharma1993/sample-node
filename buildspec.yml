@@ -9,8 +9,8 @@ phases:
   install:
     commands:
       - apt-get update -y && apt-get install -y git
-      - apt-get install nodejs && apt-get install npm
-
+    runtime-versions:
+      nodejs: 10
   pre_build:
     commands:
      - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
