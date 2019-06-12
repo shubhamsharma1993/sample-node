@@ -11,6 +11,8 @@ phases:
       nodejs: 10
   pre_build:
     commands:
+     - echo "branch name is:" $BRANCH_NAME
+     - echo "tag name:" $TAG_NAME 
      - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
      - echo “login $GIT_USER” >> ~/.netrc
      - echo “password $GIT_PASS” >> ~/.netrc
