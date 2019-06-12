@@ -26,5 +26,5 @@ phases:
      - npm build
   artifacts:
     files:
-      - '**/*
+      - '**/*'
 
