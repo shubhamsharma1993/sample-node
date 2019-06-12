@@ -1,17 +1,13 @@
 version: 0.1
 
 env:
-  variables:
-    BRANCH_NAME:master
-    MAJOR_VERSION:1
-    MINOR_VERSION:0
-    GIT_REPO:https://github.com/shubhamsharma1993/sample-node.git
   git-credential-helper: yes
 
 phases:
   install:
     commands:
       - apt-get update -y && apt-get install -y git
+      - apt-get install nodejs && apt-get install npm
 
   pre_build:
     commands:
@@ -20,9 +16,9 @@ phases:
      - echo “password $GIT_PASS” >> ~/.netrc
      - echo $BRANCE_NAME
      - echo $GIT_REPO
-     - git clone -b master https://github.com/shubhamsharma1993/sample-node.git
+     - git clone -b $BRANCH_NAME https://github.com/shubhamsharma1993/sample-node.git --branch $TAG_NAME --single-branch
   build:
    commands:
      - cd sample-node
      - git config --global user.email "shubham.sharma2@sourcefuse.com"
-     - ./git_tagging.sh
+     - npm build
