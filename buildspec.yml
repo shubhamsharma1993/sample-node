@@ -25,4 +25,4 @@ phases:
    commands:
      - cd sample-node
      - git config --global user.email "shubham.sharma2@sourcefuse.com"
-     - ./git_tagging.sh.
+     - ./git_tagging.sh
