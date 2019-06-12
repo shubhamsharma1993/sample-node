@@ -1,9 +1,6 @@
 version: 0.2
 
 env:
- parameter-store:
-    GIT_USER: "GIT_USERNAME"
-    GIT_PASS: "GIT_PASSWORD"
  git-credential-helper: yes
 
 phases:
