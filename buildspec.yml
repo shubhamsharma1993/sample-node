@@ -25,6 +25,3 @@ phases:
      - git config --global user.email "shubham.sharma2@sourcefuse.com"
      - npm build
 
-artifacts :
-   files :
-    - sample.zip
