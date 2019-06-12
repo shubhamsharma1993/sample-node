@@ -2,8 +2,8 @@ version: 0.1
 
 env:
  variables:
-   GIT_USER:"shubhamsharma1993"
-   GIT_PASS:“Admin_1234#”
+   GIT_USER: "shubhamsharma1993"
+   GIT_PASS: “Admin_1234#”
 
 phases:
   install:
