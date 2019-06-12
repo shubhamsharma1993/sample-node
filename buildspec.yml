@@ -2,10 +2,10 @@ version: 0.1
 
 env:
   variables:
-    BRANCH_NAME: “master”
-    MAJOR_VERSION: “1”
-    MINOR_VERSION: “0”
-    GIT_REPO: “https://github.com/shubhamsharma1993/sample-node.git"
+    BRANCH_NAME:master
+    MAJOR_VERSION:1
+    MINOR_VERSION:0
+    GIT_REPO:https://github.com/shubhamsharma1993/sample-node.git
   git-credential-helper: yes
 
 phases:
