@@ -1,7 +1,8 @@
 version: 0.2
 
 env:
- git-credential-helper: yes
+ parameter-store:
+    build_ssh_key: "build_ssh_key"
 
 phases:
   install:
@@ -14,8 +15,6 @@ phases:
      - echo "branch name is:" $BRANCH_NAME
      - echo "tag name:" $TAG_NAME 
      - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
-     - echo “login $GIT_USER” >> ~/.netrc
-     - echo “password $GIT_PASS” >> ~/.netrc
      - echo $BRANCE_NAME
      - echo $GIT_REPO
      - git clone -b $BRANCH_NAME https://github.com/shubhamsharma1993/sample-node.git --branch $TAG_NAME --single-branch
