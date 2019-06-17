@@ -12,6 +12,9 @@ phases:
       nodejs: 10
   pre_build:
     commands:
+     - mkdir -p ~/.ssh
+     - echo "$build_ssh_key" > ~/.ssh/id_rsa
+     - chmod 600 ~/.ssh/id_rsa
      - echo "branch name is:" $BRANCH_NAME
      - echo "tag name:" $TAG_NAME 
      - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
