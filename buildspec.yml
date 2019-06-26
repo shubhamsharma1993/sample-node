@@ -22,7 +22,7 @@ phases:
      - echo “machine git-codecommit.us-east-1.amazonaws.com” >> ~/.netrc
      - echo $BRANCE_NAME
      - echo $GIT_REPO
-     - git clone -b $BRANCH_NAME https://github.com/shubhamsharma1993/sample-node.git --branch $TAG_NAME --single-branch
+     - git clone https://github.com/shubhamsharma1993/sample-node.git 
   build:
    commands:
      - cd sample-node
